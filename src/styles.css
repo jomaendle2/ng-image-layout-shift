@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[rgb(13,10,12)] text-gray-100;
+}
+
+h2 {
+  @apply text-3xl font-bold mb-12;
+}
+
+h3 {
+  @apply text-2xl font-bold mb-4;
+}
+
