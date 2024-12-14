@@ -3,8 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'without-sizing',
-    pathMatch: 'full',
+    loadComponent: () => import('./home/home.component').then(m => m.HomeComponent)
   },
   {
   path: 'without-sizing',

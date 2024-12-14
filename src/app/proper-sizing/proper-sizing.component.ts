@@ -14,19 +14,13 @@ import { SectionComponent } from '../section/section.component';
       <div class="flex flex-col gap-16">
         @for (image of images; let index = $index; track index) {
           <app-section>
-            <div
-              [style.display]="imageLoaded().get(index) ? 'none' : 'block'"
-              [style.aspect-ratio]=" image.width / image.height "
-              [style.background-color]="image.bgColor"
-              class="absolute inset-0 animate-pulse animations"></div>
-
             <img
               [ngSrc]="image.path"
               [alt]="image.alt"
               [height]="image.height"
               [width]="image.width"
-              loading="lazy"
               [style.background-color]="image.bgColor"
+              loading="lazy"
               class="object-contain z-10 duration-500 animations"
               [ngClass]="{ 'opacity-0': !imageLoaded().get(index) }"
               (load)="setImageLoaded(index)" />

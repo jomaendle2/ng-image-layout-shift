@@ -17,6 +17,11 @@ import { WithoutSizingComponent } from './without-sizing/without-sizing.componen
     <nav class="flex w-full justify-center z-30 sticky top-0 p-8 bg-zinc-800">
       <ul class="flex gap-4">
         <li>
+          <a routerLink="/" routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }"
+             class="border border-white/40 px-4 py-3 rounded-full hover:bg-zinc-700 transition-colors">Home</a>
+        </li>
+        <li>
           <a
             routerLink="/without-sizing"
             routerLinkActive="active"

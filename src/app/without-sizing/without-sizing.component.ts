@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { IMAGES } from '../images';
 import { SectionComponent } from '../section/section.component';
 
@@ -11,7 +11,7 @@ import { SectionComponent } from '../section/section.component';
       <h2>Landing Page with Proper Image Sizing</h2>
 
       <div class="flex flex-col gap-16">
-        @for (image of images; let index = $index; track index) {
+        @for (image of images; let index = $index; track image.path) {
           <app-section>
             <img
               [src]="image.path"
